@@ -222,3 +222,15 @@ app.get("/getchat/:sender/:reciver",async(req,res,next)=>{
         return res.status(243).json({msg:"new chat"})
     }
 })
+app.delete('/delchat/:kl',async(req,res,next)=>
+    {
+      let id=req.params.kl
+      try{
+        let dat=await Mutual.findByIdAndDelete(id);
+        return res.status(243).json({msg:"deleted"})
+      }
+      catch(err)
+      {
+        console.log('error')
+      }
+    })
