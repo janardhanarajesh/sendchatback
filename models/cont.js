@@ -12,6 +12,10 @@ let con=new cont({
     chating:{
         type:String,
         required:true
+    },
+    date:{
+        type:String,
+        required:true
     }
 
 })
