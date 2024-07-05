@@ -185,10 +185,13 @@ app.post("/postchat",(req,res,next)=>{
 
     // const{dat}=req.body
     // console.log(reciver,sender,dat)
+    const date = new Date()
+
     let chat=new Mutual({
         reciver,
         sender, 
-        chating
+        chating,
+        date
     });
     try{
 chat.save();
@@ -234,3 +237,4 @@ app.delete('/delchat/:kl',async(req,res,next)=>
         console.log('error')
       }
     })
+
