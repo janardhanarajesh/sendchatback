@@ -325,7 +325,7 @@ app.delete('/delchat/:kl',async(req,res,next)=>
               var mailOpti = {
                 from: 'scripringcoder25@gmail.com',
                 to:mail,
-                subject: 'sign up to send chat',
+                subject: 'otp for account recovery',
                 html:"mr/mrs"+" "+user+" "+" "+"your otp for password recovery is"+" "+"<b>"+Otp+"</b>"
               }
               
